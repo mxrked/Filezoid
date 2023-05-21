@@ -1,0 +1,8 @@
+def open_file_explorer(self):
+    file_dialog = QFileDialog()
+    file_dialog.setFileMode(QFileDialog.Directory)
+    if file_dialog.exec_():
+        selected_files = file_dialog.selectedFiles()
+        if selected_files:
+            folder_path = selected_files[0]
+            print('Selected folder:', folder_path)  # Replace with your own logic
